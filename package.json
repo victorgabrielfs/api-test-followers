@@ -12,7 +12,7 @@
 		"url": "git+https://github.com/victorgabrielfs/api-test-followers.git"
 	},
 	"author": "victorgabrielfs",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/victorgabrielfs/api-test-followers/issues"
 	},
