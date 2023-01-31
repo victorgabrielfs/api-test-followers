@@ -21,10 +21,12 @@ const createTest = async (req, res) => {
 		})
 		.then(async (response) => {
 			console.log(response.data)
-			await User.create({ name, email, insta_user })
+			const user = await TestData.create({ name, email, insta_user })
+			return res.send({ user })
 		})
 		.catch((error) => {
 			console.log(error)
+			return res.send({ error: 'Error on request' })
 		})
 }
 
