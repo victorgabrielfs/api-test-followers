@@ -2,12 +2,12 @@ const TestData = require('../model/Test')
 const axios = require('axios')
 
 const createTest = async (req, res) => {
-	//const insta_user = req.body.insta_user
-	//const email = req.body.email
-	//const name = req.body.name
-	console.log(req.body.insta_user)
-	console.log(req.body.email)
-	console.log(req.body.name)
+	const insta_user = req.body.fields.name.value
+	const email = req.body.fields.email.value
+	const name = req.body.fields.name.value
+	console.log(insta_user)
+	console.log(email)
+	console.log(name)
 	console.log(req.body)
 
 	console.log('chegou aqui')
