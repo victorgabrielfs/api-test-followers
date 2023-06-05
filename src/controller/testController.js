@@ -5,12 +5,12 @@ const createTest = async (req, res) => {
 	const insta_user = req.body.insta_user
 	const email = req.body.email
 	const name = req.body.name
-	console.log(req.body)
+	console.log(req)
 	console.log('chegou aqui')
 	if (await TestData.findOne({ insta_user })) {
 		return res.status(400).json({ error: 'Insta profile already tested' })
 	}
-	console.log('e aqui')
+
 	const url = 'https://painelseguidores.com.br/api/v2'
 	axios
 		.post(url, {
