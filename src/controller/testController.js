@@ -5,7 +5,7 @@ const createTest = async (req, res) => {
 	const insta_user = req.body.insta_user
 	const email = req.body.email
 	const name = req.body.name
-	console.log(req.body)
+	console.log(JSON.stringify(req))
 	console.log('chegou aqui')
 
 	if (await TestData.findOne({ insta_user })) {
