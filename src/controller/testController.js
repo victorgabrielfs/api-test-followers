@@ -8,6 +8,8 @@ const createTest = async (req, res) => {
 	console.log(req.body.insta_user)
 	console.log(req.body.email)
 	console.log(req.body.name)
+	console.log(req.body)
+
 	console.log('chegou aqui')
 	return res.send(JSON.stringify(req.body))
 
