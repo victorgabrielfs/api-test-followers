@@ -13,6 +13,7 @@ const createTest = async (req, res) => {
 	console.log('chegou aqui')
 
 	if (await TestData.findOne({ insta_user })) {
+		console.log('Insta profile already tested')
 		return res.status(400).json({ error: 'Insta profile already tested' })
 	}
 
