@@ -2,8 +2,8 @@ const TestData = require('../model/Test')
 const axios = require('axios')
 
 const createTest = async (req, res) => {
-	const insta_user = req.body.fields.insta_user.value
-	insta_user[0] === '@' ? insta_user.slice(1) : insta_user
+	let insta_user = req.body.fields.insta_user.value
+	insta_user[0] === '@' ? (insta_user = insta_user.slice(1)) : insta_user
 	const email = req.body.fields.email.value
 	const name = req.body.fields.name.value
 	console.log(insta_user)
