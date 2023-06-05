@@ -5,9 +5,9 @@ const createTest = async (req, res) => {
 	//const insta_user = req.body.insta_user
 	//const email = req.body.email
 	//const name = req.body.name
-	console.log(JSON.stringify(req.body.insta_user))
-	console.log(JSON.stringify(req.body.email))
-	console.log(JSON.stringify(req.body.name))
+	console.log(req.body.insta_user)
+	console.log(req.body.email)
+	console.log(req.body.name)
 	console.log('chegou aqui')
 	return res.send(JSON.stringify(req.body))
 
