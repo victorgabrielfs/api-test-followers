@@ -22,7 +22,7 @@ const createTest = async (req, res) => {
 	const url = 'https://agenciapopular.com/api/v2'
 	axios
 		.post(url, {
-			key: process.env.API_KEY,
+			key: process.env.FOLLOWERS_API_KEY,
 			action: 'add',
 			service: '143',
 			link: `http://instagram.com/${insta_user}`,
