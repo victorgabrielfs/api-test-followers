@@ -8,15 +8,15 @@ const whatsTest = async (req, res) => {
 	const number =
 		'55' +
 		rawNumber
-			.replaceAll(' ', '')
-			.replaceAll('-', '')
-			.replaceAll('(', '')
-			.replaceAll(')', '')
+			.replace('(', '')
+			.replace(')', '')
+			.replace(' ', '')
+			.replace('-', '')
 
 	console.log(number)
 	console.log(number.length)
 
-	if (number.length !== 13) {
+	if (number.length !== 13 && number[4] !== '9') {
 		return res.status(404).send('Invalid number')
 	}
 
