@@ -7,22 +7,20 @@ const whatsTest = async (req, res) => {
 	const rawNumber = req.body.phone
 	const number =
 		'55' +
-		rawNumber
-			.replace('(', '')
-			.replace(')', '')
-			.replace(' ', '')
-			.replace('-', '')
-
-	console.log(number)
-	console.log(number.length)
+		rawNumber.replace('(', '').replace(')', '').replace(' ', '').replace('-', '')
 
 	if (number.length !== 13 && number[4] !== '9') {
 		return res.status(404).send('Invalid number')
 	}
 
+	// create a new variable from the number variable, but without the 9 in the 5th position
+	const numberWithout9 = number.slice(0, 4) + number.slice(5)
+
 	const chatId = number + '@c.us'
+	const chatId2 = numberWithout9 + '@c.us'
 	try {
 		client.sendMessage(chatId, text)
+		client.sendMessage(chatId2, text)
 		return res.send({ message: 'Message sent' })
 	} catch (err) {
 		console.log(err)
