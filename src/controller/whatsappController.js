@@ -3,7 +3,9 @@ const whatsTest = async (req, res) => {
 	if (req.body.key !== process.env.WPP_API_KEY) {
 		return res.status(400).send({ message: 'Not authorized' })
 	}
-	const text = req.body.text
+
+	const text = req.body.text.replace(/\\n/g, '\n')
+
 	const rawNumber = req.body.phone
 	const number =
 		'55' +
