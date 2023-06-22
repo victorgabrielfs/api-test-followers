@@ -25,7 +25,7 @@ const createTest = async (req, res) => {
 		.post(url, {
 			key: process.env.FOLLOWERS_API_KEY,
 			action: 'add',
-			service: '143',
+			service: '436',
 			link: `http://instagram.com/${insta_user}`,
 			quantity: 10
 		})
