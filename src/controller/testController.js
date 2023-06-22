@@ -6,13 +6,14 @@ const createTest = async (req, res) => {
 
 	let insta_user = req.body.fields.insta_user.value
 	insta_user[0] === '@' ? (insta_user = insta_user.slice(1)) : insta_user
+	insta_user = insta_user.toLowerCase()
+
 	const email = req.body.fields.email.value
 	const name = req.body.fields.f_name.value
+
 	console.log(insta_user)
 	console.log(email)
 	console.log(name)
-
-	console.log('chegou aqui')
 
 	if (await TestData.findOne({ insta_user })) {
 		console.log('Insta profile already tested')
