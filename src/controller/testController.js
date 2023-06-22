@@ -20,7 +20,7 @@ const createTest = async (req, res) => {
 		return res.status(400).json({ error: 'Insta profile already tested' })
 	}
 
-	const url = 'https://agenciapopular.com/api/v2'
+	const url = 'https://aceleragram.com.br/api/v2'
 	axios
 		.post(url, {
 			key: process.env.FOLLOWERS_API_KEY,
